@@ -10,6 +10,12 @@ authors = [
     { name = "Mike Schmidt", email = "mikeschmidt@schmidtgracen.com" }
 ]
 license = "MIT"
+dependencies = [
+    "argparse",
+    "google-api-python-client",
+    "google-auth-httplib2",
+    "google-auth-oauthlib"
+]
 
 [project.scripts]
 mfs_send_mail = "mfs_send_mail.mfs_send_mail:main"
