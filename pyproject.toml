@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mfs_send_mail"
+version = "0.1.0"
+description = "A simple python wrapper for sending gmail"
+authors = [
+    { name = "Mike Schmidt", email = "mikeschmidt@schmidtgracen.com" }
+]
+license = "MIT"
+
+[project.scripts]
+mfs_send_mail = "mfs_send_mail.mfs_send_mail:main"
