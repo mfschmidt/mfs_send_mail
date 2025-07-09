@@ -79,7 +79,7 @@ class App:
 
             # Fill in the email details
             message['To'] = self.args.to
-            message['From'] = self.args.sender
+            # message['From'] = self.args.sender  # Automatically uses oauth
             message['Subject'] = self.args.subject
             message.set_content(self.args.body)
 
@@ -117,10 +117,6 @@ def main():
     parser.add_argument(
         "body",
         help="The body of the email.",
-    )
-    parser.add_argument(
-        "sender",
-        help="Your email address, authorized via google to do this.",
     )
     app = App(parser.parse_args())
     app.create_and_send_email()
